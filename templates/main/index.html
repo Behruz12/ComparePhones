@@ -1,5 +1,33 @@
-{% extends '../layout.html' %}
+{% extends 'layouts/base.html' %}
 
 {% block content %}
-    MainIndex
+
+
+    {% include 'widgets/_about_us.html' %}
+
+    <hr/>
+
+
+    {% include 'widgets/_carusel.html' %}
+
+    <hr/>
+
+
+    {% include 'widgets/_bootom.html' %}
+
+
+
+
+{% endblock %}
+
+
+{% block js %}
+    <script>
+        $('.slick-slider').slick({
+            slidesToShow: 5,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 1000,
+        });
+    </script>
 {% endblock %}

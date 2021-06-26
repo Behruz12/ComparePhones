@@ -1,0 +1,9 @@
+{% if widget.value %}
+
+<img src="{{ MEDIA_URL }}/{{ widget.value }}" alt="" height="50px"/>
+<br/><br/>
+
+{% endif %}
+
+<input type="{{ widget.type }}" name="{{ widget.name }}" {% include 'django/forms/widgets/attrs.html' %} />
+

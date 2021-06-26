@@ -1,0 +1,88 @@
+{% extends 'layouts/base.html' %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="align-text-top">
+                    <p><h5>{{ one.name }} ХАРАКТЕРИСТИКИ, ОБЗОР, ОТЗЫВЫ, СРАВНЕНИЯ, ДАТА ВЫХОДА</h5></p>
+                </div>
+                <div class="d">
+                    <img src="{{ one.image.url }}" alt="..." class="img-fluid" style="width: 300px">
+                </div>
+            </div>
+            <div class="col-lg-8">
+                <table class="table table-bordered pt-5">
+                    <thead>
+                        <tr>
+                            <th colspan="3">Общие характеристики</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th scope="row">модель</th>
+                        <td><a href="#">{{ one.brand_id }}</a></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Марка</th>
+                        <td><a href="#">{{ one.name }}</a></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Дата выхода	</th>
+                        <td>{{ one.datetime }}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Размеры (ВxШxГ)</th>
+                        <td>{{ one.dimensions }}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Вес</th>
+                        <td>{{ one.weight }}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Цвета</th>
+                        <td>{{ one.colors }}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Аккумулятор</th>
+                        <td>{{ one.battery_type }}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Ориентировочная цена</th>
+                        <td>{{ one.Approximate_price }}</td>
+                    </tr>
+                    </tbody>
+                </table>
+                <table class="table table-bordered pt-5">
+                    <thead>
+                        <tr>
+                            <th colspan="3">Дисплей</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th scope="row">Технологии</th>
+                        <td><a href="#">{{ one.display_type }}</a></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Размер (Диагональ)</th>
+                        <td>{{ one.display_dioganal }}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Внутренняя память</th>
+                        <td>{{ one.memory_type }}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Площь экрана</th>
+                        <td>{{ one.ram_type }}</td>
+                    </tr>
+                    </tbody>
+                    <thead>
+                </table>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+
+

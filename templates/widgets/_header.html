@@ -1,0 +1,32 @@
+{% load static %}
+    <nav class=" navbar navbar-expand-lg navbar-dark bg-dark">
+        <img class="text-center" src="{% static 'img/picture2.png' %}" alt="...">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item active">
+                    <a class="nav-link" href="{% url 'main:index' %}">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'main:compare' %}">Compare</a>
+                </li>
+            </ul>
+            <form class="form-inline  my-2 my-lg-0">
+                <div class="input-group-prepend">
+                    <input type="text" placeholder="search" class="form-control ml-5">
+                </div>
+                <div class="input-group-append">
+                    <button type="submit" class="btn btn-primary">
+                        <i class="bi-search text-li"></i>
+                    </button>
+                </div>
+                 <div class="collapse navbar-collapse" id="id_navbar">
+                    <ul class="navbar-nav ml-auto">
+                        {% include 'widgets/_icons.html' %}
+                    </ul>
+                </div>
+             </form>
+        </div>
+    </nav><br>

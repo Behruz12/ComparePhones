@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'main',
     'debug_toolbar',
     'crispy_forms',
+    'user'
 ]
 
 MIDDLEWARE = [
@@ -67,7 +68,9 @@ ROOT_URLCONF = 'ComparePhones.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            BASE_DIR / 'templates'
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -131,8 +134,6 @@ USE_TZ = False
 STATIC_URL = '/static/'
 STATIC_ROOT = BASE_DIR / 'static'
 
-MEDIA_URL = '/media/'
-MEDIA_ROOT = BASE_DIR / 'media'
 
 INTERNAL_IPS = [
     '127.0.0.1'
@@ -146,4 +147,13 @@ MESSAGE_TAGS = {
      messages.DEBUG: "alert alert-dark"
 }
 
+STATICFILES_DIRS = [
+    BASE_DIR / 'assets'
+]
+
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+AUTH_USER_MODEL = 'user.User'
+
+LOGIN_URL = '/user/login/'
+LOGIN_REDIRECT_URL = '/'

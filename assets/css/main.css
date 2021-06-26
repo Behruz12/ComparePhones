@@ -1,0 +1,17 @@
+.img-fluid{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+select .form-control{
+    color: #5f6d7b;
+    border-radius: 0;
+    border-color: #e4e6e8;
+    box-shadow: none;
+}
+
+
+/*.slick-next.slick-arrow{*/
+/*    color: black;*/
+/*}*/

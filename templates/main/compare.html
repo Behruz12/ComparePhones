@@ -1,0 +1,58 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+
+
+
+{% block content %}
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <form method="post" action="{% url 'main:compare' %}">
+                    {% csrf_token %}
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <h4>First phone</h4>
+                            <select name="i1" class="form-control">
+                                {% for phone in phones %}
+                                    <option value="{{ phone.id }}">{{ phone.name }}</option>
+                                {% endfor %}
+                            </select><br>
+
+                            <button type="submit" class="btn btn-primary pt-1 form-control">Success</button>
+                        </div>
+                        <div class="col-lg-4 ml-5">
+                            <h4>Second phone</h4>
+                            <select name="i2" class="form-control">
+                                {% for phone in phones %}
+                                    <option value="{{ phone.id }}">{{ phone.name }}</option>
+                                {% endfor %}
+                            </select><br>
+                            <button type="submit" class="btn btn-primary pt-1 form-control">Success</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="col-lg-8 pt-5">
+            <div class="col-lg-4">
+                <p>Yengi qoshilganlar</p>
+                <div class="a">
+                    <img src="{% static 'img/IphoneX.jpg' %}" alt="..." class="ml-2">
+                    <img src="{% static 'img/IphoneX.jpg' %}" alt="...">
+                    <a href="{% url 'main:compare-phones' 1 3 %}" class="pt-1" style="color: black">IphoneXs vs IphoneX</a>
+                </div>
+            </div>
+            <div class="col-lg-4">
+
+            </div>
+        </div>
+    </div>
+
+
+    {% include 'widgets/_bootom.html' %}
+
+{% endblock %}
+
+
+

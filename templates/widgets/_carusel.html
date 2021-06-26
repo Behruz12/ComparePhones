@@ -1,0 +1,41 @@
+{% load static %}
+<div class="container pt-5">
+    <div class="row">
+        <div class="col-lg-8">
+            <h3 class="pt-5">Telefon</h3>
+            <div class="slick-slider pt-4">
+                {% for row in object_list %}
+                <div>
+                    <span>
+                        <img src="{{ MEDIA_URL }}{{ row.image }}" class="img-fluid" alt="..."><br>
+                        <a href="{% url 'main:compare-one' row.id %}">{{ row.name }}</a>
+                    </span>
+                </div>
+                {% endfor %}
+            </div>
+            <h3 class="pt-5">Telefon</h3>
+            <div class="slick-slider pt-4">
+                {% for row in object_list %}
+                <div>
+                    <span>
+                        <img src="{{ MEDIA_URL }}{{ row.image }}" class="img-fluid" alt="..."><br>
+                        <a href="#">{{ row.name }}</a>
+                    </span>
+                </div>
+                {% endfor %}
+            </div>
+            <h3 class="pt-5">Telefon</h3>
+            <div class="slick-slider pt-4">
+                {% for row in object_list %}
+                <div>
+                    <span>
+                        <img src="{{ MEDIA_URL }}{{ row.image }}" class="img-fluid" alt="..."><br>
+                        <a href="#">{{ row.name }}</a>
+                    </span>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+

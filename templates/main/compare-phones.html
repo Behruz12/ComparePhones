@@ -1,0 +1,104 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 pt-5">
+                <div class="row">
+                    <div class="col-lg-4 ml-5">
+                        <h4>СМАРТФОНОВ 1</h4>
+                        <img src="{{ p1.image.url }}" alt="..." class="img-thumbnail" style="width: 200px"><br>
+                        <a href="#" class="ml-5" style="font-size: 20px; color: black"><p>{{ p1.name }}</p></a>
+                    </div>
+                    <div class="col-lg-4">
+                        <h4>СМАРТФОНОВ 2</h4>
+                        <img src="{{ p2.image.url }}" alt="..." class="img-thumbnail" style="width: 200px"><br>
+                        <a href="#" class="ml-5" style="font-size: 20px; color: black"><p>{{ p2.name }}</p></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-8 pt-5">
+        <table class="table table-bordered pt-5">
+                <thead>
+                    <tr>
+                        <th colspan="3">Общие характеристики</th>
+                    </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th scope="row">модель</th>
+                    <td><a href="#">{{ p1.brand_id }}</a></td>
+                    <td>{{ p2.brand_id }}</td>
+                </tr>
+                <tr>
+                    <th scope="row">Марка</th>
+                    <td><a href="#">{{ p1.name }}</a></td>
+                    <td>{{ p2.name }}</td>
+                </tr>
+                <tr>
+                    <th scope="row">Дата выхода	</th>
+                    <td>{{ p1.datetime }}</td>
+                    <td>{{ p2.datetime }}</td>
+                </tr>
+                <tr>
+                    <th scope="row">Размеры (ВxШxГ)</th>
+                    <td>{{ p1.dimensions }}</td>
+                    <td>{{ p2.dimensions }}</td>
+                </tr>
+                <tr>
+                    <th scope="row">Вес</th>
+                    <td>{{ p1.weight }}</td>
+                    <td>{{ p2.weight }}</td>
+                </tr>
+                <tr>
+                    <th scope="row">Цвета</th>
+                    <td>{{ p1.colors }}</td>
+                    <td>{{ p2.colors }}</td>
+                </tr>
+                <tr>
+                    <th scope="row">Аккумулятор</th>
+                    <td>{{ p1.battery_type }}</td>
+                    <td>{{ p2.battery_type }}</td>
+                </tr>
+                <tr>
+                    <th scope="row">Ориентировочная цена</th>
+                    <td>{{ p1.Approximate_price }}</td>
+                    <td>{{ p2.Approximate_price }}</td>
+                </tr>
+                </tbody>
+        </table>
+        <table class="table table-bordered pt-5">
+            <thead>
+                <tr>
+                    <th colspan="3">Дисплей</th>
+                </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th scope="row">Технологии</th>
+                <td><a href="#">{{ p1.display_type }}</a></td>
+                <td>{{ p2.display_type }}</td>
+            </tr>
+            <tr>
+                <th scope="row">Размер (Диагональ)</th>
+                <td>{{ p1.display_dioganal }}</td>
+                <td>{{ p2.display_dioganal }}</td>
+            </tr>
+            <tr>
+                <th scope="row">Внутренняя память</th>
+                <td>{{ p1.memory_type }}</td>
+                <td>{{ p2.memory_type }}</td>
+            </tr>
+            <tr>
+                <th scope="row">Площь экрана</th>
+                <td>{{ p1.ram_type }}</td>
+                <td>{{ p2.ram_type }}</td>
+            </tr>
+            </tbody>
+            <thead>
+        </table>
+    </div>
+{% endblock %}
