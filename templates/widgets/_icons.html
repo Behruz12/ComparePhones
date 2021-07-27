@@ -1,8 +1,10 @@
 {% if user.is_authenticated %}
     <a href="{% url 'user:profile' %}" style="font-size: 30px" class="text-secondary h-icon " data-toggle="tooltip" title="{{ user.username }}"><i class="bi-person-fill" style="color: #1c7430;"></i></a>
     <a href="{% url 'user:logout' %}" style="font-size: 30px" class="text-secondary h-icon ml-2 ml-lg-3  " data-toggle="tooltip" title="{{ "Chiqish" }}"><i class="bi-box-arrow-in-left " style="color: #1c7430"></i></a>
-    <a href="{% url 'main:phone_create' %}" style="font-size: 30px" class="text-secondary h-icon ml-2 ml-lg-3" data-toggle="tooltip" title="{{ "Phone qo'shish" }}"><i class="bi bi-plus" style="color: #1c7430"></i></a>
 {% else %}
     <a href="{% url 'user:registration' %}" style="font-size: 30px" class="text-secondary h-icon " data-toggle="tooltip" title="{{ "Ro'yxatdan o'tish" }}"><i class="bi-person" style="color: #1c7430;"></i></a>
     <a href="{% url 'user:login' %}" style="font-size: 30px" class="text-secondary h-icon ml-2 ml-lg-3  " data-toggle="tooltip" title="{{ "Tizimga kirish" }}"><i class="bi-box-arrow-in-right " style="color: #1c7430"></i></a>
+{% endif %}
+{% if user.is_superuser %}
+        <a href="{% url 'main:phone_create' %}" style="font-size: 30px" class="text-secondary h-icon ml-2 ml-lg-3" data-toggle="tooltip" title="{{ "Phone qo'shish" }}"><i class="bi bi-plus" style="color: #1c7430"></i></a>
 {% endif %}

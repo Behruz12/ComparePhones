@@ -13,20 +13,10 @@
                     <a class="nav-link" href="{% url 'main:compare' %}">Compare</a>
                 </li>
             </ul>
-            <form class="form-inline  my-2 my-lg-0">
-                <div class="input-group-prepend">
-                    <input type="text" placeholder="search" class="form-control ml-5">
-                </div>
-                <div class="input-group-append">
-                    <button type="submit" class="btn btn-primary">
-                        <i class="bi-search text-li"></i>
-                    </button>
-                </div>
-                 <div class="collapse navbar-collapse" id="id_navbar">
-                    <ul class="navbar-nav ml-auto">
-                        {% include 'widgets/_icons.html' %}
-                    </ul>
-                </div>
-             </form>
+            <div class="collapse navbar-collapse" id="id_navbar">
+                <ul class="navbar-nav ml-auto">
+                    {% include 'widgets/_icons.html' %}
+                </ul>
+            </div>
         </div>
     </nav><br>
